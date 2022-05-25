@@ -121,8 +121,8 @@ static void register_interrupted(void) {
    act.sa_flags = SA_RESETHAND;
    act.sa_handler = on_interrupted;
    /* Signals blocked during the execution of the handler. */
-   sigemptyset(&new_action.sa_mask);
-   sigaddset(&new_action.sa_mask, SIGINT);
+   sigemptyset(&act.sa_mask);
+   sigaddset(&act.sa_mask, SIGINT);
    sigaction(SIGINT, &act, NULL);
 }
 #endif
