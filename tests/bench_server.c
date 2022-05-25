@@ -137,7 +137,7 @@ int main(int argc, char **argv) {
     if (S == NULL)
         return 2;
 
-    accept = zn_newaccept(S);
+    accept = zn_newaccept(S, 0);
     if (accept == NULL)
         return 2;
     zn_listen(accept, "0.0.0.0", port);
