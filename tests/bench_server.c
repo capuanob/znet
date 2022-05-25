@@ -120,6 +120,7 @@ static void register_interrupted(void) {
    struct sigaction act;
    act.sa_flags = SA_RESETHAND;
    act.sa_handler = on_interrupted;
+   act.sa_mask = 0;
    sigaction(SIGINT, &act, NULL);
 }
 #endif
