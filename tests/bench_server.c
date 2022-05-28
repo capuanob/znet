@@ -12,7 +12,7 @@ zn_State *S;
 zn_Accept *a;
 zn_BufferPool pool;
 
-#define INTERVAL 1
+#define INTERVAL 100
 int send_count = 0;
 int recv_count = 0;
 int connect_count = 0;
@@ -40,6 +40,7 @@ static void on_recv(void *ud, zn_Tcp *tcp, unsigned err, unsigned count) {
     zn_recv(tcp,
             zn_recvbuff(&node->recv),
             zn_recvsize(&node->recv), on_recv, ud);
+    zn_closetcp(tcp);
     zn_deltcp(tcp);
 }
 
