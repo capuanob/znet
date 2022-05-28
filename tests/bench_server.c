@@ -12,7 +12,7 @@ zn_State *S;
 zn_Accept *a;
 zn_BufferPool pool;
 
-#define INTERVAL 1000
+#define INTERVAL 1
 int send_count = 0;
 int recv_count = 0;
 int connect_count = 0;
