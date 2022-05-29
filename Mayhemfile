@@ -1,0 +1,10 @@
+image: ghcr.io/capuanob/gifh-fuzz:latest
+project: gif-h
+target: gif-h-fuzz
+tests:
+  - file://corpus
+
+cmds:
+  - cmd: /fuzz-gif -close_fd_mask=2
+    libfuzzer: true
+    max_length: 300000
