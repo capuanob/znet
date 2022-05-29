@@ -24,5 +24,5 @@ RUN apt-get update && \
 COPY --from=builder /znet/znet-fuzz /znet-fuzz
 COPY --from=builder /deps /usr/lib
 
-CMD /bench_server -close_fd_mask=2
+CMD /znet-fuzz -close_fd_mask=2
 
