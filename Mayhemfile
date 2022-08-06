@@ -1,7 +1,6 @@
-image: ghcr.io/capuanob/znet-fuzz:latest
 project: znet
 target: znet-fuzz
 
 cmds:
-  - cmd: /znet-fuzz -close_fd_mask=2
+  - cmd: /znet-fuzz
     libfuzzer: true
