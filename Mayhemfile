@@ -4,3 +4,4 @@ target: znet-fuzz
 cmds:
   - cmd: /znet-fuzz
     libfuzzer: true
+    timeout: 10
